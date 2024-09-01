@@ -15,8 +15,6 @@ for filename in os.listdir(path):
     enhancer = ImageEnhance.Contrast(edit)
     edit = enhancer.enhance(factor)
 
-    # ADD MORE EDITS FROM DOCUMENTATION https://pillow.readthedocs.io/en/stable/
-
     clean_name = os.path.splitext(filename)[0]
 
     edit.save(f'.{pathOut}/{clean_name}_edited.jpg')
